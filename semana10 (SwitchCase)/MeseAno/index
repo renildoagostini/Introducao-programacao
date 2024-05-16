@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <script>
+    let diaMes = Number(prompt("Digite um número de 1 a 12")); //Casting
+    diaMes = parseInt(diaMes);
+    switch(diaMes){
+      case 1:
+        alert("Janeiro");
+        break;
+      case 2:
+        alert("Fevereiro");
+        break;
+      case 3:
+        alert("Março");
+        break;
+      case 4:
+        alert("Abril");
+        break;
+      case 5:
+        alert("Maio");
+        break;
+      case 6:
+        alert("Junho");
+        break;
+      case 7:
+        alert("Julho");
+        break;
+      case 8:
+        alert("Agosto");
+        break;
+      case 9:
+        alert("Setembro");
+        break;
+      case 10:
+        alert("Outubro");
+        break;
+      case 11:
+        alert("Novembro");
+        break;
+      case 12:
+        alert("Dezembro");
+        break;
+      default:
+        alert("Numero inválido!");
+    }
+  </script>
+</body>
+
+</html>
