@@ -1,0 +1,44 @@
+<!--
+Elabore um programa que receba uma palavra do usuário e verifique se é um palíndromo (uma palavra que é lida da mesma forma de trás para frente). Utilize uma estrutura de repetição para comparar os caracteres.
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/estilos.css">
+  <title>Palindromo</title>
+</head>
+
+<body>
+  <script>
+    let palavra, opcao;
+
+    do {
+        palavra = prompt("Informe uma palavra");
+        var palavra2 = palavra.replace(/ /g, ""); 
+        var tam = palavra2.length;
+
+        var iguais = true;
+
+        for (var i = 0; i < tam / 2; i++) {
+            if (palavra2[i] != palavra2[tam - 1 - i]) {
+              iguais = false;              
+              break; 
+            }
+        }
+
+        if (iguais) {
+            alert("A palavra " + palavra + " é palíndroma");
+        } else {
+            alert("A palavra " + palavra + " não é palíndroma");
+        }
+        opcao = confirm("Deseja verificar outra palavra?");
+    } while (opcao);
+  </script>
+</body>
+
+</html>

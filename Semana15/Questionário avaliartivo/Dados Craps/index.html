@@ -1,0 +1,59 @@
+<!--
+Implemente o jogo de dados Craps. O jogador lança dois dados e a soma dos valores determina o resultado. Se a soma for 7 ou 11 na primeira rodada, o jogador ganha. Se for 2, 3 ou 12, o jogador perde. Para qualquer outro resultado, esse número se torna o "ponto" e o jogador continua lançando os dados até obter o mesmo número (ganha) ou até obter 7 (perde). Utilize estruturas de repetição para simular as rodadas do jogo.
+-->
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dados de Craps</title>
+</head>
+<body>
+    <script>
+        let dado1, dado2, soma, ponto, opcao;
+
+        do {
+            dado1 = Math.floor(Math.random() * 5) + 1;
+            dado2 = Math.floor(Math.random() * 5) + 1;
+
+            //dado1 = Number(prompt("Informe o dado 1")) //para teste
+            //dado2 = Number(prompt("Informe o dado 2")) //para teste
+            
+
+            alert("Você tirou " + dado1 + " e " + dado2);
+
+            if ((dado1 + dado2 == 7) || (dado1 + dado2 == 11)) {
+                alert("Jogador Venceu");
+            } else if ((dado1 + dado2 == 2) || (dado1 + dado2 == 3) || (dado1 + dado2 == 12)) {
+                alert("Jogador Perdeu");
+            } else {
+                ponto = dado1 + dado2;
+                alert("Seu ponto  acumulado é " + ponto);
+
+                do {
+                    dado1 = Math.floor(Math.random() * 5) + 1;
+                    dado2 = Math.floor(Math.random() * 5) + 1; 
+                    
+                    //dado1 = Number(prompt("Informe o dado 1")) // para teste
+                    //dado2 = Number(prompt("Informe o dado 2")) // para teste
+
+                    if ((ponto + dado1 + dado2) == 7 || (ponto + dado1 + dado2) == 11 ) {
+                        alert("Jogador Venceu com ponto ");
+                        break;
+                    } else if ((ponto + dado1 + dado2 == 2) || (ponto + dado1 + dado2 == 3) || (ponto + dado1 + dado2 == 12)) {
+                        alert("Jogador Perdeu");
+                        break;
+                    }else if (ponto + dado1 + dado2 > 12){
+                        alert("Jogador ultrapassou o numero maximo");
+                        break;
+                    }
+                } while (true);
+            }
+
+            opcao = prompt("Deseja jogar novamente? (S/N)").toUpperCase();
+        } while (opcao === 'S');
+    </script>
+</body>
+</html>

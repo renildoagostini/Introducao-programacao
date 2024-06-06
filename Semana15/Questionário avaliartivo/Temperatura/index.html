@@ -1,0 +1,22 @@
+<!--
+Desenvolva um programa que permita ao usuário converter uma temperatura de Celsius para Fahrenheit. Solicite a temperatura em Celsius e forneça o resultado em Fahrenheit. Utilize uma estrutura de repetição para permitir que o usuário faça várias conversões.
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor Temperatura</title>
+</head>
+<body>
+    <script>
+        let celsius, fahrenheit, opcao;
+        do{
+            celsius = prompt("Informe a temperatura em graus Celsius: \n");
+            fahrenheit = (celsius * 9/5) + 32;
+            alert(`A temperatura de ${celsius} °C é igual a ${fahrenheit.toFixed(2)} °F`)
+        }while(opcao == 'S');
+    </script>
+</body>
+</html>
