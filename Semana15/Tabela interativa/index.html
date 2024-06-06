@@ -1,0 +1,27 @@
+<!--
+    TABUADA INTERATIVA
+
+    Peça ao usuário para inserir um número e, em seguida, exiba a tabuada desse número. Use o loop do...while para perguntar se o usuário deseja ver a tabuada de outro número.
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada Interativa</title>
+    
+</head>
+<body>
+    <script>
+        let numero, opcao;
+        do {
+            numero = prompt("Informe um número: \n");
+            for (let i = 1; i <= 10; i++) {
+                console.log (i + " X " + numero + " = " + i * numero + "\n");
+            }            
+            opcao = prompt("\nDeseja continuar?\nS para Sim - N para Não");
+        } while (opcao == 'S');
+    </script>
+</body>
+</html>
