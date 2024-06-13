@@ -1,0 +1,26 @@
+<!--
+Exiba apenas números pares inseridos em um vetor.
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Números Pares de um Vetor</title>
+</head>
+<body>
+    <script>
+        let vetor = [3, 7, 90, 54, 6, 1, 23, 88, 102, 647, 22, 11, 33];
+        let maior = vetor[0];
+        let menor = vetor[0]
+        for (let i = 0; i < vetor.length; i++) {
+           if(vetor[i] % 2 == 0){
+            console.log(`O número ${vetor[i]} é par!\n`)
+           }
+        }
+       
+    </script>
+
+</body>
+</html>
