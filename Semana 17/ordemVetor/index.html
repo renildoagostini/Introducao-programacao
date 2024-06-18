@@ -1,0 +1,29 @@
+<!--
+Dados dois vetores de números, ordene o primeiro em ordem crescente, 
+o segundo de forma decrescente e posteriormente faça a junção dos 
+dois vetores
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ordenação de vetor</title>
+</head>
+<body>
+    <script>
+        let vetor1 = [2, 5, 7, 1, 3, 6, 4, 10, 8, 9];
+        let vetor2 = [7, 5, 8, 6, 1, 9, 2, 10, 3, 5];
+
+        vetor1.sort((a,b) =>a-b);
+        vetor2.sort((a,b) =>b-a);
+
+        let juncao = vetor1.concat(vetor2);
+
+        alert(`O vetor 1 ordenado em ordem crescente é: ${vetor1}`);
+        alert(`O vetor 2 ordenado em ordem decrescente é: ${vetor2}`);
+        alert(`O vetor 1 concatenado com o vetor 2 é: ${juncao}`);
+    </script>
+</body>
+</html>

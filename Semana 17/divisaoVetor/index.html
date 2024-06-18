@@ -1,0 +1,25 @@
+<!--
+Dado um vetor de números, crie uma função que divida o vetor em duas 
+partes iguais e retorne um novo vetor contendo as duas partes 
+concatenadas, com a segunda parte aparecendo primeiro
+-->
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divisão de Vetor</title>
+</head>
+<body>
+    <script>
+        let inteiro = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        let metade1 = inteiro.slice(0, 5);
+        let metade2 = inteiro.slice(5, 10);
+
+        let juncao = metade2.concat(metade1);
+
+        alert(juncao);
+    </script>
+</body>
+</html>
