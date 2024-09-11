@@ -1,8 +1,3 @@
-<!--
-    Soma de Números
-    Crie um programa que use um comando for para calcular a soma dos números de 1 a 100. Imprima o resultado
--->
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -15,14 +10,15 @@
     <p id="resultado"></p>
 
     <script>
-        // Inicializa variáveis para armazenar soma, maior e menor número
-        let soma = 0;
-        let maior = -Infinity;
-        let menor = Infinity;
+        // Lê o primeiro número e inicializa a soma, maior e menor com ele
+        let num = parseFloat(prompt("Digite o número 1:"));
+        let soma = num;
+        let maior = num;
+        let menor = num;
 
-        // Loop para ler 5 números
-        for (let i = 1; i <= 5; i++) {
-            let num = parseFloat(prompt(`Digite o número ${i}:`));
+        // Loop para ler os próximos 4 números
+        for (let i = 2; i <= 5; i++) {
+            num = parseFloat(prompt(`Digite o número ${i}:`));
 
             // Soma dos números
             soma += num;
